@@ -1,8 +1,7 @@
-
 #!/bin/sh
 DIALOG=${DIALOG=dialog}
 
-whiptail --title "Editeur de message vocaux" --msgbox " Entrez les dates et heures de diffusion, votre message au format text.                              Vous pourrez également visualisez les interventions précédentes.                                                 Ok pour continuer" 15 60
+whiptail --title "Editeur de message vocaux" --msgbox " Entrez les dates et heures de diffusion, votre message au format texte.                              Vous pourrez également avoir un rendu du message.                                                                             " 15 60
 
 while : ; do
 
