@@ -1,7 +1,8 @@
+
 #!/bin/sh
 DIALOG=${DIALOG=dialog}
 
-whiptail --title "Editeur de message vocaux" --msgbox " Entrez les dates et heures de diffusion, le nom du fichier, votre message au format texte.                              Vous pourrez avoir un rendu du message.                                                                             " 15 60
+whiptail --title "Editeur de message vocaux" --msgbox "Entrez les dates et heures de diffusion, votre message au format texte.                                                     Vous pourrez également écouter le rendu du message.                                                                      " 15 60
 
 while : ; do
 
@@ -120,17 +121,23 @@ h2=$(echo ${HeureFin:0:5}|tr -d ':'});
 echo  $Message>message.txt
 
 fichier=$(echo $d1$h1$d2$h2$Nomfichier".wav");
+fichiertemp=$(echo $d1$h1$d2$h2$Nomfichier"temp.wav");
 
 
 #Génération du fichier Son
-pico2wave -l fr-FR -w $fichier <message.txt;
-#Transformation au format SvxLink en passant par un fichier .16k
-sox $fichier -r16k $fichier".16k"
-#Modification du nom du fichier compatible relais
-mv $fichier".16k" $fichier
+#pico2wave -l fr-FR -w $fichier <message.txt;
+#Essai avec Googlespeech
+python3 lirefichier.py message.txt
+#Transformation du mp3 en Wav
+sleep 10
+mpg123 -w $fichiertemp output.mp3
+#Transformation au format SvxLink 
+sleep 5
+sox $fichiertemp -r16k $fichier
+rm output.mp3
+rm $fichiertemp
 #copie du fichier dans le dossier du relais dédié
 #cp $fichier /usr/share/svxlink/sounds/fr_FR/Messages/
-
 }
 
 Ecouter_Message()
