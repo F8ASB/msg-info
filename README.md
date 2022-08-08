@@ -3,10 +3,18 @@ Générateur de message d'information pour relais radioamateur SvxLink
 
 **En cours de developpement**
 
-installation de pico2wave et sox necessaire
+installation de Google text to Speech et sox necessaire
 
-sudo apt install libttspico-utils
-sudo apt install sox
+ 
+Installation ncessaire:
+pip install gTTS
+
+apt-get install sox
+
+apt-get install mplayer
+
+apt-get install mpg123
+
 
 Installation du script dans SvxLink selon article du Blog F8ASB.com
 
