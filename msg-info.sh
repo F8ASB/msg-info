@@ -129,10 +129,10 @@ fichiertemp=$(echo $d1$h1$d2$h2$Nomfichier"temp.wav");
 #Essai avec Googlespeech
 python3 txt_to_mp3.py message.txt
 #Transformation du mp3 en Wav
-sleep 10
+sleep 3
 mpg123 -w $fichiertemp output.mp3
 #Transformation au format SvxLink 
-sleep 5
+sleep 3
 sox $fichiertemp -r16k $fichier
 rm output.mp3
 rm $fichiertemp
