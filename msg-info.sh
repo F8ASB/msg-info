@@ -127,7 +127,7 @@ fichiertemp=$(echo $d1$h1$d2$h2$Nomfichier"temp.wav");
 #Génération du fichier Son
 #pico2wave -l fr-FR -w $fichier <message.txt;
 #Essai avec Googlespeech
-python3 lirefichier.py message.txt
+python3 txt_to_mp3.py message.txt
 #Transformation du mp3 en Wav
 sleep 10
 mpg123 -w $fichiertemp output.mp3
