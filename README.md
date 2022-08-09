@@ -1,7 +1,5 @@
 # msg-info
 
-#  **En cours de developpement**
-
 Générateur de message d'information pour relais radioamateur SvxLink
 
 Ce programme permet de generer automatiquement un fichier son au format Wav SvxLink depuis une saisie de texte. Il formatera aussi le nom du fichier pour gérer sa diffusion. Ensuite c'est [le script tcl](http://blog.f8asb.com/2017/09/17/svxlink-messages-dinformations-programmes/) qui est integré dans SvxLink qui lancera automatiquement les diffusions.
