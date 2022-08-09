@@ -27,28 +27,61 @@ Installation du script dans SvxLink selon article du
 ### Voici des aperçus écran du programmme:
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo01.png)
+
 On choisi de réaliser un message vocal
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo02.png)
+
 On defini la date de début du message
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo03.png)
+
 On defini l'heure de début de diffusion
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo04.png)
+
 On défini la date de fin de diffusion
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo05.png)
+
 On défini l'heure de fin de diffusion
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo06.png)
+
 On choisi le nom du fichier
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo07.png)
-On defini le contenu du message, le texte sera ensuite automatiquement transformer en voix.
+
+On defini le contenu du message, le texte sera ensuite automatiquement transformer en voix. J'ai ecris "rendez-vous vendredi soir au radioclub vendredi soir venez nombreux"
+La ponctuation peut changer l'intonation de la voix.
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo09.png)
+
 Le programme réalise le fichier son, avec le bon format svxlink et également le nom du fichier qui precise le debut et la fin de diffusion.
+
+Le format des fichiers son utilisés est le suivant:
+
+Début----------------*--------------------Fin
+
+AA MM JJ HH MM AA MM JJ HH MM NOM.wav
+
+**AA** pour année
+
+**MM** pour mois
+
+**JJ** pour jour
+
+**HH** pour heure
+
+**MM** pour minute
+
+**NOM** pour le nom du message. ( il n’est pas pris en compte par le programme vous êtes libre d’écrire ce que vous voulez)
+
+*Voici ci-dessous un exemple de fichier:*
+
+**17090915001709301900brocanteradioamateur.wav**
+
+Il sera diffusé du 9 septembre 2017 à 15h00 jusqu’au 30 septembre 2017 19h00.
 
 
 ![](http://blog.f8asb.com/wp-content/uploads/2022/08/msginfo08.png)
@@ -102,6 +135,8 @@ cette option simulera l'envoi d'un dtmf sur le relais*
 
 `echo "10#" > /tmp/dtmf_vhf
 echo "10#" > /tmp/dtmf_uhf`
+
+### Le script Python:
 
 Le script lirefichier.py s'occupe lui de transformer un fichier texte en son mp3.
 Le fichier de sortie s'appellera `Output.mp3`
