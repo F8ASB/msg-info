@@ -91,13 +91,13 @@ On peut ensuite ecouter le message obtenu
 
 ### Il y a 3 options possibles:
 
-* Ecouter en local sur les haut parleur de la machine
+* Ecouter en local sur les haut-parleurs de la machine
 
 * Ecouter sur le relais en coupant le relais, il commutera le ptt le temps de la lecture du message.
 
 * Ecouter en simulant un commande DTMF sur le relais
 
-Il sera necessaire de decommenter l'option choisi dans le code **msg-info.sh**.
+Il sera necessaire de décommenter l'option choisi dans le code **msg-info.sh**.
 
 
 Option 1
