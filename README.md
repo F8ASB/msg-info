@@ -59,7 +59,7 @@ La ponctuation peut changer l'intonation de la voix.
 
 Le programme réalise le fichier son, avec le bon format svxlink et également le nom du fichier qui precise le debut et la fin de diffusion.
 
-Le format des fichiers son utilisés est le suivant:
+### Le format des fichiers son utilisés est le suivant:
 
 Début----------------*--------------------Fin
 
