@@ -1,5 +1,9 @@
-
 #!/bin/sh
+#
+#Gestion de message d'information pour relais par F8ASB Juan
+#2022 site de reference F8ASB.COM
+#
+
 DIALOG=${DIALOG=dialog}
 
 whiptail --title "Editeur de messages vocaux" --msgbox "Entrez les dates et heures de diffusion, votre message au format texte.                                                     Vous pourrez également écouter le rendu du message.                                                                      " 15 60
