@@ -142,7 +142,44 @@ rm $fichiertemp
 
 Ecouter_Message()
 {
+
+#**********
+#*Option 1*
+#**********
+
+#ecouter sur un pc linux avec carte son et HP
+
 aplay $fichier
+
+#**********
+#*Option 2*
+#**********
+
+# Coupe le relais et joue le morceau
+# Le port audio doit etre bon hw:1 ou 0
+# Le gpio doit correspondre au ptt du relais
+# Il sera necessaire de relancer le relais après
+
+#pkill svxlink
+#echo 1 > /sys/class/gpio/gpio16/value
+
+#AUDIODEV=hw:1 play $fichier
+
+#sleep 3
+#echo 0 > /sys/class/gpio/gpio16/value
+
+#**********
+#*Option 3*
+#**********
+
+#Envoi le code DTMF pour ecouter le message programmer par le relais
+# Il est necessaire que le fichier soit dans le dossier Messages deddié
+# avec le bon format de nom.
+# cette option simulera l'envoi d'un dtmf sur le relais
+
+#echo "10#" > /tmp/dtmf_vhf
+#echo "10#" > /tmp/dtmf_uhf
+
 }
 
 case $choix in
