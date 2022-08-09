@@ -138,9 +138,9 @@ echo "10#" > /tmp/dtmf_uhf`
 
 ### Le script Python:
 
-Le script lirefichier.py s'occupe lui de transformer un fichier texte en son mp3.
+Le script txt_to_mp3.py s'occupe lui de transformer un fichier texte en son mp3.
 Le fichier de sortie s'appellera `Output.mp3`
 La commande d'utilsation est:
-`Python3 txttomp3.py <nomdufichiertexte>`
+`Python3 txt_to_mp3.py <nomdufichiertexte>`
 
 Si vous le transformer en executable la commande ./ remplacera python3.
